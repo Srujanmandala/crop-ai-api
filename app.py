@@ -70,11 +70,11 @@ class OrderRequest(BaseModel):
 
 class MarketInsight(BaseModel):
     crop: str
-    demandTrend: str = Field(..., regex="^(up|down|stable)$")
+    demandTrend: str = Field(..., pattern="^(up|down|stable)$")
     currentPrice: float
     projectedPrice: float
     seasonalFactor: float
-    riskLevel: str = Field(..., regex="^(low|medium|high)$")
+    riskLevel: str = Field(..., pattern="^(low|medium|high)$")
     bestRegions: List[str]
     optimalPlantingWindow: str
     marketShare: float
@@ -85,7 +85,7 @@ class WeatherForecast(BaseModel):
     temperature: Dict[str, float]
     rainfall: float
     humidity: float
-    outlook: str = Field(..., regex="^(favorable|moderate|challenging)$")
+    outlook: str = Field(..., pattern="^(favorable|moderate|challenging)$")
     impact: str
     windSpeed: float
     uvIndex: int
