@@ -70,7 +70,7 @@ class OrderRequest(BaseModel):
 
 class MarketInsight(BaseModel):
     crop: str
-    demandTrend: str = Field(..., regex="^(up|down|stable)$")
+    demandTrend: str = Field(..., pattern="^(up|down|stable)$")
     currentPrice: float
     projectedPrice: float
     seasonalFactor: float
