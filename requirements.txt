@@ -15,8 +15,7 @@ pyyaml>=6.0
 # Web Framework and API (Required for Backend)
 fastapi>=0.104.0
 uvicorn==0.24.0
-pydantic-core==2.14.1 --only-binary :all:
-pydantic==2.5.0 --only-binary :all:
+pydantic-core==2.14.1
 
 # Visualization and Analysis
 matplotlib>=3.6.0
